@@ -1,0 +1,43 @@
+
+    <div class="container">
+        <div class="sender">
+            <span class="logout"><img src="img/love-arrow.svg" alt="love" width="100%" height="100%"></span>
+                <figure class="user">
+                    <div class="img"><img src="img/tia.jpeg" alt="User" width="100%"></div>
+                    <div class="user-info">
+                        <span class="name"><%= user; %></span>
+                        <span><img src="img/love.svg" alt="love" width="10px"></span>
+                    </div>
+                </figure>
+            <span class="love"><img src="img/love.svg" alt="love" width="60%" height="80%"></span>
+        </div>
+        <ul class="chatbox">
+            <% if (data.length > 0) { %>
+                <% data.forEach(element => { %>
+                <li 
+                class="
+                <% if (element.user == user) { %>
+                 message-right
+                 <% } else { %>
+                 message-left 
+                 <% } %>">
+                    <span>
+                        <%= element.msg %>
+                    </span>
+                    <span><%= element.user %> : <%= element.time %></span>
+                    <span><img src="img/love.png" width="40px"></span>
+                </li>
+                <% }) %>
+            <% } %>
+        </ul>
+
+            <form class="message-box">
+                <textarea type="text" class="input-message" placeholder="Ketikan pesan..." value=""></textarea>
+                <button type="submit" class="send-message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>

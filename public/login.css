@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Cascadia mono", sans-serif;;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.login {
+    width: 80%;
+    margin:20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ece8f8;
+}
+
+.login input {
+    outline: none;
+    /* border: none; */
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.login .submit {
+    padding: 10px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    background-color: #7c64be;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: .7s ease;
+}
+
+.login .submit:hover {
+    background-color: #ac8eff;
+}

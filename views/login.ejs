@@ -1,0 +1,11 @@
+<h2 class="title">Login Chatbox</h2>
+
+<% if (error.length > 0) { %>
+    <h4 style="background-color: red; padding: 10px; color: #fff;"><%= error %></h4>
+<% } %>
+
+<form action="/login" method="post" class="login">
+    <input type="text" name="user" placeholder="username...">
+    <input type="password" name="password" placeholder="password...">
+    <button type="submit" name="submit" class="submit">Log In</button>
+</form>
